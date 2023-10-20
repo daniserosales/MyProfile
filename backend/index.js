@@ -1,7 +1,11 @@
-const api = require ("./api")
 require("dotenv").config()
-const port = process.env.PORT || 3000;
+const api = require ("./api")
 
-api.listen(port, () => {
-    console.log(`API is listening on port ${port}.`)
+
+console.log('pear')
+app.listen(process.env.PORT, () => {
+    console.log(`API listening on port ${process.env.PORT}...`);
 })
+
+
+module.exports = api;
