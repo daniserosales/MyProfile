@@ -1,8 +1,9 @@
 require("dotenv").config();
+const path = require('path');
 const fs = require('fs');
 const db = require('./connect');
 
-const sql = fs.readFileSync('./database/users.sql').toString();
+const sql = fs.readFileSync(path.join(__dirname, 'users.sql')).toString()
 
 
 db.query(sql)
