@@ -1,4 +1,4 @@
-const Token = require("../models/Token");
+const Token = require("../model/Token");
 
 class TokenController {
   static async getAllToken(req, res) {

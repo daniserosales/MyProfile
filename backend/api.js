@@ -3,6 +3,8 @@ const cors = require("cors")
 const logger = require('morgan');
 
 const api = express()
+const userRouter = require('./routers/userRoutes')
+const tokenRouter = require ('./routers/tokenRoutes')
 
 api.use(cors())
 api.use(express.json())
@@ -15,5 +17,9 @@ api.get("/",(req,res) => {
 api.use(cors());
 api.use(express.json());
 api.use(logger('dev'));
+
+api.use("/user", userRouter);
+api.use("/token", tokenRouter)
+
 
 module.exports = api

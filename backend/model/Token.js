@@ -10,6 +10,7 @@ class Token {
     static async getAll() {
         const response = await db.query("SELECT * FROM tokens");
         return response.rows.map((row) => new Token(row));
+       
       }
     static async create(user_id) {
         const token = uuidv4();

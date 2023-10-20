@@ -1,8 +1,8 @@
 const bcrypt = require("bcrypt");
 require("dotenv").config();
-const User = require("../models/Users");
-const Token = require("../models/Token");
-const Verification = require("../models/Verification");
+const User = require("../model/Users");
+const Token = require("../model/Token");
+// const Verification = require("../model/Verification");
 
 class UserController {
     static async getAllUsers(req, res) {
