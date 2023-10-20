@@ -46,8 +46,8 @@ class User {
     }
 
     async update(data) {
-        const { username, first_name, last_name, phone_number, email, above18,  borough, password, image_url } = data;
-        const response = await db.query("UPDATE users SET username = $1, first_name = $2, last_name = $3, phone_number = $4, email = $5, above18 = $6, borough = $7, password = $8, image_url = $9 WHERE users_id = $10 RETURNING *;", [username, first_name, last_name, phone_number, email, above18,  borough, password, image_url, this.id]);
+        const {  first_name, last_name, email,password, school} = data;
+        const response = await db.query("UPDATE users SET first_name = $1, last_name  = $2, email  = $3, password = $4, school = $5 RETURNING *;", [ first_name, last_name, email, password, this.id]);
         const userId = response.rows[0].users_id
         const newUser = await User.getOneByUserId(userId)
         return newUser
