@@ -95,7 +95,7 @@ class UserController {
 
       await sgMail.send({
         to: result.email,
-        from: `Audify.me <${process.env.SENDER_EMAIL}>`,
+        from: `Ms. Danise <${process.env.SENDER_EMAIL}>`,
         subject: "Verify your email",
         html: `<div style="width: 70%; margin: 0 auto; ">
           <h3>Thanks for signing up! We're excited to have you as an early user. Just verify your email and start browsing my projects!</h3>
@@ -107,4 +107,33 @@ class UserController {
       res.status(400).json({ error: error.message });
     }
   }
+  static async login(req, res) {
+    const data = req.body;
+    try {
+      const user = await User.getByUsername(data.username);
+      const authenticated = await bcrypt.compare(data.password, user.password);
+      if (!authenticated) {
+        throw new Error("Wrong username or password");
+      } else {
+        const token = await Token.create(user.id);
+        res.status(200).json({ authenticated: true, user, token: token.token });
+      }
+    } catch (error) {
+      res.status(403).json({ error: error.message });
+    }
+  }
+  
+  static async logout(req, res) {
+    try {
+      const token = req.headers.authorization;
+
+      await Token.deleteByToken(token);
+
+      res.status(200).json({ message: "Logged out successfully." });
+    } catch (error) {
+      res.status(500).json({ error: "Unable to logout." });
+    }
+  }
 }
+
+module.exports = UserController;
