@@ -3,11 +3,19 @@ const path = require('path');
 const fs = require('fs');
 const db = require('./connect');
 
-const sql = fs.readFileSync(path.join(__dirname, 'users.sql')).toString()
+async function setupTables() {
+    try {
+        const sqlUsers = fs.readFileSync(path.join(__dirname, 'users.sql')).toString();
+        const sqlWords = fs.readFileSync(path.join(__dirname, 'spelling.sql')).toString();
+        await db.query(sqlUsers);
+        await db.query(sqlWords);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-
-db.query(sql)
-    .then(data => console.log("Set-up complete."))
+setupTables()
+    .then(() => console.log("Set-up complete."))
     .catch(error => console.log(error));
 
-console.log('banana')
+console.log('banana');
