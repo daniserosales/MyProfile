@@ -12,7 +12,7 @@ class WordController {
 
     static async getWordById(req, res) {
         try {
-            const wordId = req.params.wordId;
+            const wordId = parseInt(req.params.wordId);
             const word = await Word.getOneByWordId(wordId);
             if (word) {
                 res.status(200).json(word);
@@ -24,9 +24,9 @@ class WordController {
         }
     }
 
-    static async getWordByWord(req, res) {
+    static async search(req, res) {
         try {
-            const word = req.body;
+            const word = req.body.word;
             const words = await Word.getWordByWord(word);
             if (words) {
                 res.status(200).json(words);
@@ -40,8 +40,8 @@ class WordController {
 
     static async getWordByUserID(req, res) {
         try {
-            const word = req.params.userId;
-            const words = await Word.getWordByUserID(word);
+            const userId = parseInt(req.params.userId);
+            const words = await Word.getWordByUserID(userId);
             res.status(200).json(words)
         } catch(error) {
             res.status(404).json({error: "Word or user ID not found."})
@@ -58,8 +58,26 @@ class WordController {
         }
     }
 
+    async update(req, res) {
+        try {
+            const data = req.body;
+            const word = await Word.update(data);
+            res.status(200).json(word);
+        } catch (error) {
+            res.status(404).json({"error": error.message})
+        }
+    }
 
+    async delete(req, res) {
+        try {
+            const word = await Word.getOneByWordId(req.params.id)
+            const result = await word.destroy()
+            res.status(204).json(result)
+        } catch (error) {
+            res.status(404).json({ "error": error.message })
+        }
+    }
+    }
 
-}
 
 module.exports = WordController
