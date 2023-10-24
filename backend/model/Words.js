@@ -40,12 +40,6 @@ class Words {
         return new User(response.rows[0]);
     }
 
-    static async getOneByEmail(email) {
-        const response = await db.query("SELECT * FROM words WHERE email = $1", [email]);
-        if (response.rows.length != 1) {
-            throw new Error("Unable to locate email.")
-        }
-    }
     static async create(data) {
         const { words: words } =  data; 
         const query =   "INSERT INTO words (words) " + 
