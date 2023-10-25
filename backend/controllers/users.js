@@ -17,7 +17,7 @@ class UserController {
     static async getUserById(req, res) {
         const { id } = req.params;
         try {
-            const user = await User.getById(id);
+            const user = await User.getOneByUserId(id);
             res.status(200).jsdon(user);
         } catch (error) {
             res.status(404).json({error: "User not found."})
@@ -27,28 +27,19 @@ class UserController {
         const { email } = req.body;
 
         try {
-            const user = await User.getByEmail(email);
+            const user = await User.getOneByEmail(email);
         } catch (error) {
             console.log(error)
             res.status(404).json({ error: "User not found"})
         }
     }
-    static async getUserByToken(req,res) {
-        const { token } = req.body;
-     try {
-        const user = await User.getOneByToken(token)
-        res.status(200).json(user);
-    } catch (error) {
-        console.log(error)
-        res.status(404).json({error: "Token not found."})
-      }
-    }
+ 
     static async updateUser(req, res) {
         const { id } = req.params;
         const { firstName, lastName, email, password, school } = req.body;
     
         try {
-          const user = await User.getById(id);
+          const user = await User.getOneByUserId(id);
           user.firstName = firstName || user.firstName;
           user.lastName = lastName || user.lastName;
           user.password = password || user.password;
@@ -62,12 +53,12 @@ class UserController {
         }
     }
     
-  static async deleteUser(req, res) {
-    const { id } = req.params;
-    try {
-      const user = await User.getById(id);
-      await user.delete();
-      res.status(204).json({ message: "User deleted successfully." });
+  static async destroy(req, res) {
+       try {
+      const { id } = req.params;
+      const user = await User.getOneByUserId(id);
+      const result = await user.destroy();
+      res.status(204).json(result);
     } catch (error) {
       res.status(404).json({ error: "User not found." });
     }
@@ -77,12 +68,9 @@ class UserController {
     try {
       const data = req.body;
 
-      if (await User.checkUsernameExists(data.username)) {
-        return res.status(400).json({ error: 'Username already registered.' });
-      }
-
-      if (await User.checkEmailExists(data.email)) {
-        return res.status(400).json({ error: 'Email already registered.' });
+     
+      if (await User.getOneByEmail(data.email)) {
+        return res.status(409).json({ error: 'Email already registered.' });
       }
       
       const salt = await bcrypt.genSalt(rounds);
