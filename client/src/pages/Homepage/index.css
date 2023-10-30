@@ -1,0 +1,42 @@
+
+  body {
+    display: flex;
+  }
+
+
+  .homepageBody {
+    display: flex;
+   
+    
+    font-family: 'Ysabeau Office', sans-serif;
+  }
+
+  .danimg {
+    margin-top:10%;
+    margin-left: 10%;
+  }
+.h2 {
+    left: -5%;
+    top:200px;
+    position:relative;
+    padding: 20px;
+}
+
+.danise {
+    top: 250px;
+    left: -100px;
+   margin:10px;
+    position: relative; 
+    height:90px;
+    width: 300px;
+    font-size: 50px;
+} 
+
+.introduction {
+    top: 370px; 
+    display: block; 
+    margin: 20px;
+    position: relative;
+    margin-left:-370px;
+    width:700px;
+}
