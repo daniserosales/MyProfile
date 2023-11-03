@@ -46,8 +46,8 @@ class UserController {
           user.email = email || user.email;
           user.school = school || user.school;
           
-          await user.update();
-          res.status(202).json(user);
+         const result = await user.updateUser();
+          res.status(202).json(result);
         } catch (error) {
           res.status(404).json({ error: "User not found." });
         }

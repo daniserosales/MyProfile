@@ -14,6 +14,7 @@ class Words {
         if (response.rows.length === 0) {
             throw new Error("Words not found.")
             }
+            return response.rows
     }
 
     static async getOneByUserId(id) {
@@ -21,7 +22,7 @@ class Words {
         if (response.rows.length != 1) {
             throw new Error("Unable to locate user.")
         } 
-        return new User(response.rows[0]);
+        return new Words(response.rows[0]);
     }
 
     static async getOneByWordId(id) {
@@ -29,7 +30,7 @@ class Words {
         if (response.rows.length != 1) {
             throw new Error("Unable to locate word.")
         } 
-        return new User(response.rows[0]);
+        return new Words(response.rows[0]);
     }
 
     static async getOneByWord(word) {
@@ -37,7 +38,7 @@ class Words {
         if (response.rows.length != 1) {
             throw new Error("Unable to locate word.")
         } 
-        return new User(response.rows[0]);
+        return new Words(response.rows[0]);
     }
 
     static async create(data) {

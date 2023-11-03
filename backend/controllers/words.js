@@ -1,9 +1,12 @@
+
 const Word = require ("../model/Words");
 
 class WordController {
     static async getAllWords(req, res) {
         try {
+            console.log("are you")
             const words = await Word.getAll();
+            console.log(words)
             res.status(200).json(words)
         } catch (error) {
             res.status(500).json({ "error": error.message })
@@ -58,17 +61,25 @@ class WordController {
         }
     }
 
-    async update(req, res) {
+    static async updateWord(req, res) {
+        const { id } = req.params;
+        const { newWord } = req.body; // Use a different variable name
+    
         try {
-            const data = req.body;
-            const word = await Word.update(data);
-            res.status(200).json(word);
+            const word = await Word.getOneByWordId(id);
+            
+            // Update the word property with the newWord value
+            word.word = newWord;
+    
+            // Use the correct update method here
+            const result = await word.update();
+            res.status(202).json(result);
         } catch (error) {
-            res.status(404).json({"error": error.message})
+            res.status(404).json({ error: "Word not found." });
         }
     }
 
-    async delete(req, res) {
+   static async delete(req, res) {
         try {
             const word = await Word.getOneByWordId(req.params.id)
             const result = await word.destroy()
@@ -77,7 +88,7 @@ class WordController {
             res.status(404).json({ "error": error.message })
         }
     }
-    }
+}
 
 
 module.exports = WordController
