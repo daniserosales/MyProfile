@@ -1,3 +1,5 @@
+delete require.cache[require.resolve('../../backend/controllers/words')];
+
 require("dotenv").config()
 const api = require ("./api")
 
