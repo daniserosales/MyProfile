@@ -21,8 +21,8 @@ const Homepage = () => {
       <p className='introduction'>I'm the architect of the digital wonderland, fashioning enchanting user interfaces and conjuring powerful code incantations in both frontend and backend realms.</p>
     </div>
     <div className="shape">
-      <div className='circle1'>
-        <div className='circleALT'></div>
+      <div className='circle1' >
+        <div className='circleALT' id="active"></div>
         <div className='circle2'>
         </div>
       </div>

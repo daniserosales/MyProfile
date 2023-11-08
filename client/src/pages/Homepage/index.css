@@ -166,15 +166,29 @@
         
        
     }
-
     @keyframes round_round {
-         0%,100% {
+        0% {
             transform: rotate(0deg);
         }
-        50% {
-            transform: rotate(180deg);
+        100% {
+            transform: rotate(360deg);
         }
     }
+    
+
+    @keyframes fadeColor {
+        0%, 100% {
+            background-color: white;
+        }
+        50% {
+            background-color: red; /* Change to the desired color */
+        }
+    }
+    
+
+
+    
+    
     .circleALT {
         display: block;
         height: 80px;
@@ -184,13 +198,15 @@
         margin-left: -35%;
         background-color: red;
         position: absolute;
-        animation: round_round 6s linear infinite;
-        animation-delay: 2s; 
-        transform-origin: 50% 180px;
+        animation: round_round 9s linear infinite, fadeColor 8s linear infinite;
+        
+        transform-origin: 50% 177px;
         mix-blend-mode: overlay;
         
-
     }
+    
+   
+    
 
     .circle2 {
         height: 300px;
