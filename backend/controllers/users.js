@@ -1,8 +1,9 @@
 const bcrypt = require("bcrypt");
+const sgMail = require("@sendgrid/mail");
 require("dotenv").config();
 const User = require("../model/Users");
 const Token = require("../model/Token");
-// const Verification = require("../model/Verification");
+const Verification = require("../model/Verification");
 
 class UserController {
     static async getAllUsers(req, res) {
@@ -14,6 +15,29 @@ class UserController {
         }
     }
 
+    static async checkEmailToken(req, res) {
+      const token = req.query.token;
+      try {
+        console.log("run");
+        const verifiedToken = await Verification.getOneByToken(token);
+        await Verification.deleteByToken(verifiedToken.token_id);
+        await User.verifyUser(verifiedToken.user_id);
+  
+        // Redirecting to a frontend success page
+        res.redirect(frontEndUrl + 'login');
+      } catch (error) {
+        // Redirecting to a frontend error page
+        res.redirect(frontEndUrl + 'signup');
+      }
+    }
+    static async verifyUser(id) {
+      const response = await db.query(
+        `UPDATE users SET is_verified = true WHERE user_id = $1 RETURNING *`,
+        [id]
+      );
+  
+      return response.rows[0];
+    }
     static async getUserById(req, res) {
         const { id } = req.params;
         try {
