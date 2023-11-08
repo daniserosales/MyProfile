@@ -1,4 +1,5 @@
 const db = require('../database/connect')
+require("dotenv").config();
 
 class User {
 
@@ -10,7 +11,6 @@ class User {
         this.password = password;
         this.school = school;
     }
-
 
     static async getAll() {
         const response = await db.query("SELECT * FROM users")
@@ -35,6 +35,15 @@ class User {
         }
         return new User(response.rows[0]);
     }
+
+    static async verifyUser(id) {
+        const response = await db.query(
+          `UPDATE users SET is_verified = true WHERE user_id = $1 RETURNING *`,
+          [id]
+        );
+    
+        return response.rows[0];
+      }
 
     static async create(data) {
         const { first_name, last_name, email, password, school } = data;
