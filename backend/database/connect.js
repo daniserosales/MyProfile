@@ -1,4 +1,5 @@
-const { Pool } = require("pg-pool");
+require("dotenv").config()
+const { Pool } = require("pg");
 let db;
 
 if (process.env.NODE_ENV == "test") {
