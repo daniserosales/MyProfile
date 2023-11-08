@@ -5,7 +5,7 @@ const api = require ("./api")
 
 
 console.log('pear')
-app.listen(process.env.PORT, () => {
+api.listen(process.env.PORT, () => {
     console.log(`API listening on port ${process.env.PORT}...`);
 })
 
