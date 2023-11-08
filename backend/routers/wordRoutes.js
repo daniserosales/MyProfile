@@ -1,5 +1,5 @@
 const express = require("express");
-const WordController = require("../../backend/controllers/words");
+const WordController = require("..//controllers/words");
 const router = express.Router();
 
 router.get("/:id", WordController.getWordByUserID);
