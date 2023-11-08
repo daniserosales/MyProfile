@@ -1,5 +1,6 @@
 const express = require("express");
 const UserController = require("../../backend/controllers/users");
+const Authorization = require ("../middleware/authenticator")
 const router = express.Router();
 
 router.get("/", UserController.getAllUsers);
