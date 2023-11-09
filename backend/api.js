@@ -21,7 +21,7 @@ api.use(logger('dev'));
 
 api.use("/user", userRouter);
 api.use("/token", tokenRouter)
-api.use("/word", wordRouter)
+// api.use("/word", wordRouter)
 
 
 module.exports = api
