@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors")
 const logger = require('morgan');
-
+console.log(sushi)
 const api = express()
 const userRouter = require('./routers/userRoutes')
 const tokenRouter = require ('./routers/tokenRoutes')

@@ -1,5 +1,3 @@
-delete require.cache[require.resolve('../../backend/controllers/words')];
-
 
 const express = require("express");
 const WordController = require("..//controllers/words");
