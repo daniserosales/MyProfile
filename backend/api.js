@@ -3,9 +3,10 @@ const cors = require("cors")
 const logger = require('morgan');
 console.log("sushi")
 const api = express()
+
 const userRouter = require('./routers/userRoutes')
 const tokenRouter = require ('./routers/tokenRoutes')
-const wordRouter = require ('../backend/routers/wordRoutes')
+// const wordRouter = require ('../backend/routers/wordRoutes')
 api.use(cors())
 api.use(express.json())
 console.log('bananaaaaa')
