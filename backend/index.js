@@ -1,6 +1,6 @@
 
 require("dotenv").config()
-const api = require ("./api")
+const api = require ("../backend/api")
 
 
 console.log('pear')
