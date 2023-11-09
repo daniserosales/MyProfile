@@ -1,6 +1,6 @@
 
 const Word = require ("../model/Words");
-
+console.log('christmas')
 class WordController {
     static async getAllWords(req, res) {
         try {
