@@ -6,7 +6,7 @@ const api = express()
 
 const userRouter = require('./routers/userRoutes')
 const tokenRouter = require ('./routers/tokenRoutes')
-// const wordRouter = require ('../backend/routers/wordRoutes')
+const wordRouter = require ('./routers/wordRoutes')
 api.use(cors())
 api.use(express.json())
 console.log('bananaaaaa')
@@ -21,7 +21,7 @@ api.use(logger('dev'));
 
 api.use("/user", userRouter);
 api.use("/token", tokenRouter)
-// api.use("/word", wordRouter)
+api.use("/word", wordRouter)
 
 
 module.exports = api

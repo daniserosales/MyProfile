@@ -7,6 +7,7 @@ async function setupTables() {
     try {
         const sqlUsers = fs.readFileSync(path.join(__dirname, 'users.sql')).toString();
         const sqlWords = fs.readFileSync(path.join(__dirname, 'spelling.sql')).toString();
+        console.log(sqlWords, "harryPotter")
         await db.query(sqlUsers);
         await db.query(sqlWords);
     } catch (error) {
