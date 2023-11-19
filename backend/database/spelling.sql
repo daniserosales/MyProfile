@@ -17,7 +17,6 @@ CREATE TABLE words (
 CREATE TABLE room (
     room_id INT GENERATED ALWAYS AS IDENTITY,
     user_id INT,
-    room_id_final INT, 
     room_date DATE,
     PRIMARY KEY (room_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
@@ -33,9 +32,9 @@ CREATE TABLE answers (
     FOREIGN KEY (room_id) REFERENCES room(room_id)
 );
 
-INSERT INTO room (user_id, room_id_final, room_date)
+INSERT INTO room (user_id, room_date)
 VALUES
-(1,3456, '10/25/23');
+(1, '10/25/23');
 
 INSERT INTO answers (answer, room_id, user_id)
 VALUES

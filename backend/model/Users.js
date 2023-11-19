@@ -17,7 +17,7 @@ class User {
         if (response.rows.length === 0) {
             throw new Error("Users not found.")
         }
-        return response.rows.map(u => new User(u));
+       return response.rows.map(u => new User(u));
     }
 
     static async getOneByUserId(id) {
