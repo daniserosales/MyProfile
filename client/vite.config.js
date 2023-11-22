@@ -1,21 +1,23 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path'; // Import the path module
+
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src'), // Adjust the path if needed
-      },
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'), // Adjust the path if needed
     },
-    css: {
-      modules: {
-        // enable CSS modules globally
-        globalModulePaths: [/\.global\.\w+$/],
-      },
+  },
+  css: {
+    modules: {
+      globalModulePaths: [/\.global\.\w+$/],
     },
-    test: {
-      globals: true,
-      environment: 'jsdom',
-      css: true,
-    },
-  });
-  
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    css: true,
+  },
+});
