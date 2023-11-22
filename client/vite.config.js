@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import fs from 'fs/promises';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,9 +14,10 @@ export default defineConfig({
   },
   optimizeDeps: {
     esbuildOptions: {
-      loader: {
+      loaders: {
         '.js': 'jsx',
+        '.jsx': 'jsx',
       },
     },
   },
-})
+});
