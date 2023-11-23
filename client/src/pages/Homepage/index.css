@@ -6,6 +6,10 @@
     font-family: 'DM Sans', sans-serif;
     width:100%;
     font-family: 'Ysabeau Office', sans-serif;
+    margin-top: -30%;
+  }
+  body {
+    background-color: #160040;
   }
 
   .danimg {
@@ -19,6 +23,7 @@
     top:200px;
     position:relative;
     padding: 20px;
+    color: gray;
 }
 
 
@@ -30,22 +35,27 @@
     height: 90px;
     width: 300px;
     font-size: 50px;
-    z-index: 500;
-    mix-blend-mode: overlay;
+    z-index: 1000;  
+    
 
     /* Set a background-color with sufficient contrast */
   
-    color: black; /* Set the text color to white or any contrasting color */
+    color: white; /* Set the text color to white or any contrasting color */
+}
+h1 {
+    color: white;
 }
 
 
 .introduction {
     top: 370px; 
     display: flex; 
-    margin: 20px;
+    margin: 40px;
     position: relative;
     margin-left:-370px;
-    width:800px;
+    width:650px;
+    color: gray;
+    line-height: 2.5;
 }
 
 .shape {

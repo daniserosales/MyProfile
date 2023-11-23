@@ -36,10 +36,16 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const styles = {
+    appBar: {
+      background: 'rgb(148, 11, 146, 0.4)',
+      backdropFilter: 'blur(10px)'
+    }
+  }
 
   return (
     
-    <AppBar position="static"sx={{ background: '#000000' }}>
+    <AppBar position="static"sx={styles.appBar}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
        

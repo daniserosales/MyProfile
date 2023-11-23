@@ -18,4 +18,4 @@ function TextMorph() {
     );
 };
 
-export default TextMorph
+export default TextMorph;

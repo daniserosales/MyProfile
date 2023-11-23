@@ -1,14 +1,15 @@
 import React from 'react';
 import "./index.css"
-import Navbar from "../../components/Navbar"
-// import TextMorph from "../../components/TextMorph"
+import {Navbar, Lines} from '../../components'
 
 const Homepage = () => {
   return (
     <>
   <Navbar />
   {/* <TextMorph /> */}
+  <Lines />
   <div className='homepageBody'>
+  
     <img className='danimg' src="../src/assets/dan@3x.png" alt="daniseimage" width="500" />
     <div className='mobile-container'>
       <img className='daniseALT' src="../src/assets/DaniseALT.png" alt="alternateImage" />
@@ -18,7 +19,7 @@ const Homepage = () => {
       <h1 className='danise'>Danise Rosales</h1>
     </div>
     <div className='p'>
-      <p className='introduction'>I'm the architect of the digital wonderland, fashioning enchanting user interfaces and conjuring powerful code incantations in both frontend and backend realms.</p>
+      <p className='introduction'> architect of the digital wonderland, fashioning enchanting user interfaces and conjuring powerful code incantations in both frontend and backend realms.</p>
     </div>
     <div className="shape">
       <div className='circle1'>
