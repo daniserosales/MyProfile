@@ -56,12 +56,19 @@ width: 95%;opacity: 0;
     }
 }
 
-svg 
+svg {
+    animation: glowAnimation 20s linear infinite; 
+    background: linear-gradient(90deg, purple, yellow, blue, purple);
+    background-size: 200% 100%;
+    filter: blur(5px)
+}
   path {
     fill: none;
     stroke: yellow;
     stroke-width: 1px;
     vector-effect: non-scaling-stroke;
     position: absolute;
+    
   }  
+  
 
