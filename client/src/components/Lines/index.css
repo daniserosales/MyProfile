@@ -1,6 +1,6 @@
 .light{
     position: relative;
-    top: 150px;
+    top: 110px;
     margin: 20px 0;
     width: 100%;
     ;
@@ -9,13 +9,37 @@
 .line1{
     position: absolute;
     z-index: 10;
-    height: 1px;
+    margin-top: 10px;
+    height: 2px;
     width:100%;
     background: linear-gradient(90deg, purple, yellow, blue, purple); /* Set the gradient colors for the glow effect */
       background-size: 200% 100%; /* Twice the width to cover the animation range */
       animation: glowAnimation 20s linear infinite; /* Adjust the animation duration as needed */
       opacity: .4;
     }
+    .line2{
+      margin-top: 18px;
+      position: absolute;
+      z-index: 10;
+      height: 1px;
+      width:100%;
+      background: linear-gradient(90deg, purple, yellow, blue, purple); /* Set the gradient colors for the glow effect */
+        background-size: 200% 100%; /* Twice the width to cover the animation range */
+        animation: glowAnimation 20s linear infinite; /* Adjust the animation duration as needed */
+        opacity: .4;
+      }
+      .line3{
+        margin-top: 24px;
+        position: absolute;
+        z-index: 10;
+        height: 3px;
+        width:100%;
+        background: linear-gradient(90deg, purple, yellow, blue, purple); /* Set the gradient colors for the glow effect */
+          background-size: 200% 100%; /* Twice the width to cover the animation range */
+          animation: glowAnimation 20s linear infinite; /* Adjust the animation duration as needed */
+          opacity: .4;
+          filter: blur(3px);
+        }
     @keyframes glowAnimation {
         0% {
           background-position: 100% 0;
@@ -56,11 +80,12 @@ width: 95%;opacity: 0;
     }
 }
 
-svg {
+.svg {
     animation: glowAnimation 20s linear infinite; 
-    background: linear-gradient(90deg, purple, yellow, blue, purple);
-    background-size: 200% 100%;
-    filter: blur(5px)
+    background: linear-gradient(90deg, #160040, blue, purple, #160040);
+    background-size: 100% 50%;
+    filter: blur(3px);
+    margin-top: 25px;
 }
   path {
     fill: none;
@@ -70,5 +95,23 @@ svg {
     position: absolute;
     
   }  
-  
+  .svg2 {
+    
+    
+    background-size: 100% 50%;
+    filter: blur(3px);
+    
+       
+    position:absolute;
+    z-index: 2000;
+    
+}
+  path {
+    fill: none;
+    stroke: yellow;
+    stroke-width: 1px;
+    vector-effect: non-scaling-stroke;
+    
+    
+  }  
 

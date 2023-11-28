@@ -10,7 +10,7 @@ const Lines = () => {
                 <div class='line2'></div>
                 <div class='line3'></div>
             
-            <svg viewBox="0 39 100 28">
+                <svg class="svg" viewBox="0 39 100 28">
   <path d="
     M 0, 40
     L 70, 40
@@ -20,6 +20,19 @@ const Lines = () => {
     L 100, 45
   "></path>
 </svg>
+
+<svg class="svg2" viewBox="0 39 100 60">
+  <path d="
+    M 0, 40
+    L 70, 40
+    
+    L 80, 40
+   
+    L 100, 45
+  "></path>
+</svg>
+
+
 </div>
         </>
     )

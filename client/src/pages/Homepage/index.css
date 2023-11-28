@@ -3,7 +3,7 @@
     overflow: hidden;
     position:relative;
     display: flex;
-    font-family: 'DM Sans', sans-serif;
+    
     width:100%;
     font-family: 'Ysabeau Office', sans-serif;
     margin-top: -30%;
@@ -15,7 +15,7 @@
   .danimg {
     margin-top:10%;
     margin-left: 10%;
-    z-index: 400    ;
+    z-index: 400;
   }
   
   .h2 {
@@ -141,15 +141,15 @@ h1 {
     
 }
 
-@media screen and (max-width: 600px) {
 
-}
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     
     .homepageBody {
         height: 900px;
     }
-    
+    .shape {
+        left: 75%;
+    }
     .danimg {
         display: none;
     }
@@ -160,10 +160,11 @@ h1 {
         width: 300px;
         border-radius: 50%;
         position: absolute;
-        margin-left: 10%;
+        left: -332%;
         z-index: 200;
-        margin-top: 8%;
+        margin-top: 40%;
         object-fit: cover; 
+        align-items: center;
      
     }
 
@@ -215,11 +216,16 @@ h1 {
         
     }
     
-  
+  .text-zone-container {
+    height: 500px;
+   
+    text-align: center;
+    margin-left: -10%;
+  }
 
     .danise {
         font-size: 20px;
-        position: absolute;
+        
         margin-top: 30%;
         margin-left: 40%;
         text-align: center;
@@ -227,10 +233,7 @@ h1 {
     }
 
     .h2 {
-        margin-top: 30%;
-        position: absolute;
-        margin-left: 90px;
-        font-size: 15px;
+        display: none;
     }
     .p {
         margin-top:10%;
@@ -239,14 +242,15 @@ h1 {
         display: flex;
     }
     .introduction {
-        position: absolute;
+        position: relative;
         font-size: 13px;
         text-align:center;
         height: 50px;
-        margin-top: 40px;
+        margin-top: -210px;
         width: 300px;
-        margin-left: 10%;
+        margin-left: 15%;
         word-spacing: 1px;
+        z-index: 20;
         line-height: 2.0;
     }
 }
