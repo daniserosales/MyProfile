@@ -10,9 +10,9 @@ const Homepage = () => {
   <Lines />
   <div className='homepageBody'>
   
-    <img className='danimg' src="../public/dan@3x.png" alt="daniseimage" width="500" />
+    <img className='danimg' src="../../dan@3x.png" alt="daniseimage" width="500" />
     <div className='mobile-container'>
-      <img className='daniseALT' src="../public/DaniseALT.png" alt="alternateImage" />
+      <img className='daniseALT' src="../../DaniseALT.png" alt="alternateImage" />
     </div>
     <h2 className='h2'>I'm</h2>
     <div className='name'>
