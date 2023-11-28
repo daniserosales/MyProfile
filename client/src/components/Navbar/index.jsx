@@ -65,7 +65,7 @@ function Navbar() {
             }}
           >
              <img
-              src="../src/assets/danise-logo.png"
+              src="../public/danise-logo.png"
               alt="Your Logo"
               style={{ height: '40px', marginRight: '10px' }}
             />
