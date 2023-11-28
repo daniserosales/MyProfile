@@ -148,7 +148,8 @@ h1 {
         height: 900px;
     }
     .shape {
-        left: 75%;
+        left: 70%;
+        height: 500px;
     }
     .danimg {
         display: none;
@@ -156,13 +157,13 @@ h1 {
 
     .daniseALT {
         display: block;
-        height: 300px; /* Set the same value for height and width to create a perfect circle */
-        width: 300px;
+        height: 350px; /* Set the same value for height and width to create a perfect circle */
+        width: 350px;
         border-radius: 50%;
         position: absolute;
-        left: -332%;
+        left: -370%;
         z-index: 200;
-        margin-top: 40%;
+        margin-top: 8%;
         object-fit: cover; 
         align-items: center;
      
@@ -187,29 +188,18 @@ h1 {
         }
     }
     .circleALT {
-        display: block;
-        height: 80px;
-        width: 80px;
-        border-radius: 50%;
-        margin-top: -330%;
-        margin-left: -35%;
-        background-color: red;
-        position: absolute;
-        animation: round_round 6s linear infinite;
-        animation-delay: 2s; 
-        transform-origin: 50% 180px;
-        mix-blend-mode: overlay;
+        display: none;
         
 
     }
 
     .circle2 {
-        height: 300px;
-        width: 300px; /* Adjust width for consistency with height */
-        margin-left: -182%;
-        margin-top: -293%;
-        position: absolute;
+        height: 350px;
+        width: 350px; /* Adjust width for consistency with height */
+        align-items: center;
+        margin-top: -325%;
         
+        margin-left: -220%;
         z-index: 900;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); 
       
@@ -227,7 +217,7 @@ h1 {
         font-size: 20px;
         
         margin-top: 30%;
-        margin-left: 40%;
+        margin-left: 37%;
         text-align: center;
         z-index: 600;
     }
@@ -243,12 +233,12 @@ h1 {
     }
     .introduction {
         position: relative;
-        font-size: 13px;
+        font-size: 15px;
         text-align:center;
         height: 50px;
         margin-top: -210px;
         width: 300px;
-        margin-left: 15%;
+        margin-left: 12%;
         word-spacing: 1px;
         z-index: 20;
         line-height: 2.0;
