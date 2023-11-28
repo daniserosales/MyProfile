@@ -142,13 +142,18 @@ h1 {
 }
 
 
-@media screen and (max-width: 600px) {
-    
+@media screen and  (max-width: 500px) {
+    body {
+        width: 500px;
+    }
     .homepageBody {
         height: 900px;
+        
     }
     .shape {
+        display:flex;
         left: 70%;
+        justify-content: center;    
         height: 500px;
     }
     .danimg {
@@ -196,6 +201,115 @@ h1 {
     .circle2 {
         height: 350px;
         width: 350px; /* Adjust width for consistency with height */
+        align-items: center;
+        margin-top: -325%;
+        
+        margin-left: -220%;
+        z-index: 900;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); 
+      
+        
+    }
+    
+  .text-zone-container {
+    height: 500px;
+    margin-top: 100px;
+    text-align: center;
+    margin-left: -10%;
+  }
+
+    .danise {
+        font-size: 20px;
+        
+        margin-top: 30%;
+        margin-left: 37%;
+        text-align: center;
+        z-index: 600;
+    }
+
+    .h2 {
+        display: none;
+    }
+    .p {
+        margin-top:10%;
+        height: 400px;
+        width: 400px;
+        display: flex;
+    }
+    .introduction {
+        position: relative;
+        font-size: 15px;
+        text-align:center;
+        height: 50px;
+        margin-top: -210px;
+        width: 300px;
+        margin-left: 12%;
+        word-spacing: 1px;
+        z-index: 20;
+        line-height: 2.0;
+    }
+}
+
+
+@media screen and  (max-width: 400px) {
+    body {
+        width: 400px;
+    }
+    .homepageBody {
+        height: 900px;
+        
+    }
+    .shape {
+        display:flex;
+        left: 88%;
+        justify-content: center;    
+        height: 500px;
+    }
+    .danimg {
+        display: none;
+    }
+
+    .daniseALT {
+        display: block;
+        height: 250px; /* Set the same value for height and width to create a perfect circle */
+        width: 250px;
+        border-radius: 50%;
+        position: absolute;
+        left: -370%;
+        z-index: 200;
+        margin-top: 19%;
+        object-fit: cover; 
+        align-items: center;
+     
+    }
+
+    .circle1 {
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        margin-left: -150%;
+        margin-top: 250px;
+        
+       
+    }
+
+    @keyframes round_round {
+         0%,100% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+    }
+    .circleALT {
+        display: none;
+        
+
+    }
+
+    .circle2 {
+        height: 250px;
+        width: 250px; /* Adjust width for consistency with height */
         align-items: center;
         margin-top: -325%;
         
