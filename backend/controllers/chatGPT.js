@@ -20,7 +20,7 @@ async function getOpenAIResponse(prompt) {
       openaiEndpoint,
       {
         prompt,
-        max_tokens: 150, // Adjust based on your requirements
+        max_tokens: 100, // Adjust based on your requirements
       },
       {
         headers: {
