@@ -38,7 +38,8 @@
           background-size: 200% 100%; /* Twice the width to cover the animation range */
           animation: glowAnimation 20s linear infinite; /* Adjust the animation duration as needed */
           opacity: .4;
-          filter: blur(3px);
+          filter: blur(1px);
+          
         }
     @keyframes glowAnimation {
         0% {
@@ -84,8 +85,10 @@ width: 95%;opacity: 0;
     animation: glowAnimation 20s linear infinite; 
     background: linear-gradient(90deg, #160040, blue, purple, #160040);
     background-size: 100% 50%;
-    filter: blur(3px);
+    box-shadow: 20px 10px 30px rgba(0, 0, 0, 1);
+    filter: blur(1px);
     margin-top: 25px;
+    
 }
   path {
     fill: none;
@@ -93,6 +96,7 @@ width: 95%;opacity: 0;
     stroke-width: 1px;
     vector-effect: non-scaling-stroke;
     position: absolute;
+    
     
   }  
   .svg2 {
