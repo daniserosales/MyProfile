@@ -1,4 +1,14 @@
 
+  .welcome {
+    font-size: 100px;
+    z-index: 7000;
+    color: white;
+    position: relative;
+    margin-top: -30%;
+    font-family: 'Bilbo Swash Caps', cursive;
+    margin-left:5%;
+    
+  }
   .homepageBody {
     overflow: hidden;
     position:relative;
@@ -6,7 +16,7 @@
     
     width:100%;
     font-family: 'Ysabeau Office', sans-serif;
-    margin-top: -32.7%;
+    margin-top: -14.7%;
   }
   body {
     background-color: #160040;
@@ -22,16 +32,22 @@
   }
 .h2{
     margin-top: 23%;
-    margin-left: 17%;
+    margin-left: 1%;
+    font-family: 'DM Sans', sans-serif;
 }
 .name {
-margin-left: 19%;
+margin-left: 1%;
+font-family: 'DM Sans', sans-serif;
 
 }
   .p{
     margin-top: 1%;
     width: 50%;
     line-height: 2;
+    margin-left: 1%;
+    font-family: 'DM Sans', sans-serif;
+    text-align: justify;
+  text-justify: inter-word;
   }
 
   .image-container {
@@ -42,7 +58,7 @@ margin-left: 19%;
     width: 450px;
   }
 
-  .danimg {
+  /* .danimg {
     align-items: center;
     width: 100%;
     margin-left: 42%;
@@ -50,12 +66,12 @@ margin-left: 19%;
     position: relative;
     -webkit-filter: drop-shadow(5px 10px 5px #222);
     filter: drop-shadow(5px 10px 30px #222);
-  }
+  } */
 
   .danise {
     margin-top: 2%;
     color: white;
-    font-size: 50px;
+    font-size: 80px;
     mix-blend-mode: hard-light;
     z-index: 700;
   }

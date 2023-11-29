@@ -12,7 +12,7 @@
     margin-top: 10px;
     height: 2px;
     width:100%;
-    background: linear-gradient(90deg, purple, yellow, blue, purple); /* Set the gradient colors for the glow effect */
+    background: linear-gradient(90deg,blue, purple, yellow, blue); /* Set the gradient colors for the glow effect */
       background-size: 200% 100%; /* Twice the width to cover the animation range */
       animation: glowAnimation 20s linear infinite; /* Adjust the animation duration as needed */
       opacity: .4;
@@ -23,7 +23,7 @@
       z-index: 10;
       height: 1px;
       width:100%;
-      background: linear-gradient(90deg, purple, yellow, blue, purple); /* Set the gradient colors for the glow effect */
+      background: linear-gradient(90deg, yellow, blue, purple, yellow); /* Set the gradient colors for the glow effect */
         background-size: 200% 100%; /* Twice the width to cover the animation range */
         animation: glowAnimation 20s linear infinite; /* Adjust the animation duration as needed */
         opacity: .4;
@@ -82,7 +82,9 @@ width: 95%;opacity: 0;
 }
 
 .svg {
-    animation: glowAnimation 20s linear infinite; 
+    animation: glowAnimation 10s linear infinite; 
+    background: linear-gradient(90deg, #160040, blue, purple, #160040);
+    animation: glowAnimation 10s linear infinite; 
     background: linear-gradient(90deg, #160040, blue, purple, #160040);
     background-size: 100% 50%;
     box-shadow: 20px 10px 30px rgba(0, 0, 0, 1);
@@ -92,7 +94,7 @@ width: 95%;opacity: 0;
 }
   path {
     fill: none;
-    stroke: yellow;
+    /* stroke: yellow; */
     stroke-width: 1px;
     vector-effect: non-scaling-stroke;
     position: absolute;

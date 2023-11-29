@@ -5,12 +5,13 @@ import {Navbar, Lines} from '../../components'
 const Homepage = () => {
   return (
     <>
-  <Navbar />
+  {/* <Navbar /> */}
   {/* <TextMorph /> */}
   <Lines />
+  <div className='welcome'>Welcome</div>
   <div className='homepageBody'>
     < div className='image-container'>
-  <img className='danimg' src="../../dan@3x.png" alt="daniseimage" width="500" />
+  {/* <img className='danimg' src="../../dan@3x.png" alt="daniseimage" width="500" /> */}
   </div>
   <div className='mobile-container'></div>
   <div class="text-zone-container">
