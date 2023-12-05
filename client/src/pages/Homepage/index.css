@@ -17,13 +17,14 @@
     margin-top: 3%;
     font-family: 'DM Sans', sans-serif;
     margin-left:5%;
+    height: 100px;
     
   }
   .homepageBody {
     overflow: hidden;
     position:relative;
     display: flex;
-    
+    height: 600px;
     width:100%;
     font-family: 'Ysabeau Office', sans-serif;
     margin-top: -30.7%;
@@ -40,29 +41,39 @@
   .text-zone-container {
     color: #FFE3BB;
     margin-top: 16%;
-    margin-left: -1%;
-    position: relative;
+ text-align: center;
+    position: absolute;
+    width: 100%;
   }
 
 .name {
 margin-left: 0%;
 font-family: 'DM Sans', sans-serif;
 font-size: 1em ;
+text-align: center;
+position: relative;
+}
+.danise {
+  text-align: center;
+  
 }
 .p {
-    margin-top: 1%;
+   
     font-size: 1.1em;
     line-height: 2;
-    margin-left: -8%;
+    
     font-family: 'DM Sans', sans-serif;
     text-align: center;
+    position: absolute;
+    width: 100%;
 }
 
 .introduction div {
     display: inline-block;
     justify-content: space-between;
     max-width: 520px;
-    margin-left: 95px; 
+    
+    margin-left: 3%; 
 }
   /* Adjust as needed for spacing between div elements */
 

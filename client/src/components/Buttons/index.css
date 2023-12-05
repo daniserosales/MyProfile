@@ -1,84 +1,51 @@
 .buttons {
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
     margin-top: 32%;
-  
+    position: absolute;
+}
+
+
+.resume-icon,
+.mail-icon {
     height: 50px;
     width: 50px;
-
-}
-.project-container {
-    position: absolute;
-    
-    
-    margin-left: -58%;
-}
-.project{
-    position: absolute;
-    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
-    
-    text-align: center;
-    
-    opacity: .5;
-    transition: opacity 0.3s ease-in-out;
-}   
-.project:hover{
-    opacity: 1;
-}
-.cv-container {
-    position: absolute;
-    
-
-    margin-left: -38%;
+    margin: 0 5px; /* Adjust the margin as needed */
 }
 
 .project-icon {
-    height: 50px;
-    width: 50px;
-
+   height: 50px;
 }
-.contact-container{
-    position: absolute;
-    
-
-    margin-left: -18%;
-}
-.resume-icon{
-    height: 50px;
-    width: 50px;
-
-}
-.resume {
-    position: absolute;
- 
-    
-    
+.project {
     text-align: center;
-   
     transition: opacity 0.3s ease-in-out;
-    opacity: .5;
+    opacity: 0.5;
+    height: 50px;
 }
+.project:hover {
+    opacity: 1;
+}
+
+.resume {
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.5;
+}
+
 .resume:hover {
     opacity: 1;
 }
 
-.mail-icon {
-    height: 50px;
-    width: 50px;
-
-}
-
 .contact {
-    position: absolute;
-  
-    
     border-radius: 10%;
-    
-    color:white;
-    text-align: center;
+    color: white;
+    align-items: center;
     height: 70px;
-    width: 70px;
-
-    opacity: .5;
+    width: 100%;
+    opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
 }
 
