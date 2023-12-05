@@ -24,7 +24,7 @@
     overflow: hidden;
     position:relative;
     display: flex;
-    height: 600px;
+    height: 1000px;
     width:100%;
     font-family: 'Ysabeau Office', sans-serif;
     margin-top: -30.7%;
@@ -73,7 +73,8 @@ position: relative;
     justify-content: space-between;
     max-width: 520px;
     
-    margin-left: 3%; 
+    margin-left: 2%;
+    margin-right: 2%;
 }
   /* Adjust as needed for spacing between div elements */
 
