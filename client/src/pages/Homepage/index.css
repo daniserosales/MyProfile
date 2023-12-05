@@ -30,6 +30,7 @@
   }
   body {
     background-color: #160040;
+    font-size: 0.625em/.11em;
   }
 
   .daniseALT {
@@ -39,18 +40,18 @@
   .text-zone-container {
     color: #FFE3BB;
     margin-top: 16%;
-    margin-left: -4%;
+    margin-left: -1%;
+    position: relative;
   }
 
 .name {
-margin-left: 1%;
+margin-left: 0%;
 font-family: 'DM Sans', sans-serif;
-
-
+font-size: 1em ;
 }
 .p {
     margin-top: 1%;
-    font-size: 20px;
+    font-size: 1.1em;
     line-height: 2;
     margin-left: -8%;
     font-family: 'DM Sans', sans-serif;
@@ -247,7 +248,7 @@ font-family: 'DM Sans', sans-serif;
     background-size: cover; /* Adjust as needed */
     bottom: -150px;
     animation: animate 45s linear infinite, glow 5s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px rgba(255, 1, 242, 0.5))
+    
     
 }
 

@@ -2,28 +2,27 @@
  
     margin-top: 32%;
   
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
 
 }
 .project-container {
     position: absolute;
     
-
+    
     margin-left: -58%;
 }
 .project{
     position: absolute;
-    background-color: orange;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
     
-    border-radius: 10%;
-    
-    color:white;
     text-align: center;
-    height: 70px;
-    width: 70px;
-
-    opacity: .9;
+    
+    opacity: .5;
+    transition: opacity 0.3s ease-in-out;
+}   
+.project:hover{
+    opacity: 1;
 }
 .cv-container {
     position: absolute;
@@ -33,8 +32,8 @@
 }
 
 .project-icon {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
 
 }
 .contact-container{
@@ -44,33 +43,33 @@
     margin-left: -18%;
 }
 .resume-icon{
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
 
 }
 .resume {
     position: absolute;
-    background-color: skyblue;
+ 
     
-    border-radius: 10%;
     
-    color:white;
     text-align: center;
-    height: 70px;
-    width: 70px;
-
-    opacity: .9;
+   
+    transition: opacity 0.3s ease-in-out;
+    opacity: .5;
+}
+.resume:hover {
+    opacity: 1;
 }
 
 .mail-icon {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
 
 }
 
 .contact {
     position: absolute;
-    background-color: yellow;
+  
     
     border-radius: 10%;
     
@@ -79,5 +78,10 @@
     height: 70px;
     width: 70px;
 
-    opacity: .9;
+    opacity: .5;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contact:hover {
+    opacity: 1;
 }
