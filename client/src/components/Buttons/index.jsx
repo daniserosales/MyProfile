@@ -9,7 +9,7 @@ function Buttons() {
             <div className="buttons">
                 <div className="project-container">
                     <NavLink to="/project" className="project" >
-                        <img className="project-icon" src="./../public/rocket.png" alt="project"></img>
+                        <img className="project-icon" src="./../../public/rocket.png" alt="project"></img>
                     </NavLink>  
                 </div>
                 <div className="cv-container">
