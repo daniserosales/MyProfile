@@ -120,4 +120,21 @@ width: 95%;opacity: 0;
     
     
   }  
+.line4-container{
+  position: absolute;
+  z-index: 700;
+  margin-left: 34%;
+  height: 1px;
+  width: 450px; 
+  background-color: yellow;
+  filter: blur(1px);
+  margin-top: 22%;
+}
+.line4 {
+     
+ height: 100%;
+ width: auto;
+  
+  
 
+}

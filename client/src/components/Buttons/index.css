@@ -1,0 +1,83 @@
+.buttons {
+ 
+    margin-top: 32%;
+  
+    height: 70px;
+    width: 70px;
+
+}
+.project-container {
+    position: absolute;
+    
+
+    margin-left: -58%;
+}
+.project{
+    position: absolute;
+    background-color: orange;
+    
+    border-radius: 10%;
+    
+    color:white;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+
+    opacity: .9;
+}
+.cv-container {
+    position: absolute;
+    
+
+    margin-left: -38%;
+}
+
+.project-icon {
+    height: 70px;
+    width: 70px;
+
+}
+.contact-container{
+    position: absolute;
+    
+
+    margin-left: -18%;
+}
+.resume-icon{
+    height: 70px;
+    width: 70px;
+
+}
+.resume {
+    position: absolute;
+    background-color: skyblue;
+    
+    border-radius: 10%;
+    
+    color:white;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+
+    opacity: .9;
+}
+
+.mail-icon {
+    height: 70px;
+    width: 70px;
+
+}
+
+.contact {
+    position: absolute;
+    background-color: yellow;
+    
+    border-radius: 10%;
+    
+    color:white;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+
+    opacity: .9;
+}
