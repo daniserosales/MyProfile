@@ -392,3 +392,19 @@ position: relative;
     position: absolute;
   }
 }
+
+
+@media screen and (max-width: 410px) { 
+  .p {
+    display: none;
+  }
+
+  .welcome{
+    position: relative;
+  }
+
+  .text-zone-container{
+    margin-top: 34%;
+    position: absolute;
+  }
+}
