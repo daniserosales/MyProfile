@@ -1,0 +1,125 @@
+.resume-container {
+    background-color: azure;
+    height:700px;
+    margin-top: 4%;
+    width: 600px;
+    border-radius: 2%;
+    padding: 10px;
+   
+}
+
+.resume {
+    border: 2px solid #3498db;
+    border-radius: 2%;
+    height: 100%;   
+    padding: 2px;
+    box-sizing: border-box;
+    
+    
+}
+
+.heading {
+    font-size: 30px;
+    
+}
+.connect-me {
+ margin-top: 5px;
+}
+.resume-line-container{
+    width: 550px;
+    height: 1px;
+    background-color: red;
+  
+}
+
+  .experience-container {
+    height: 600px;
+    width: 400px;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: scroll;
+    background-color: inherit;
+    
+  }
+
+  .experience {
+    font-size: 1.2em;
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    width: 100% ;
+    background-color: azure;
+    text-align: left;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+.exp-title-1,
+ .exp-title-2 , .exp-title-3{
+    text-align: left;
+}
+.unordered-list{
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+/* STYLING SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 1vw; /* THIS WILL RESET THE DEFAULT SCORLLBAR STYLING */
+  }
+  
+  /* TO STYLE THE SCROLLBAR TRACK */
+  ::-webkit-scrollbar-track {
+    background-color: azure; /* THIS WILL SET THE COLOR OF THE SCROLLBAR TRACK */
+  }
+  
+  /* TO STYLE THE SCROLLBAR THUMB */
+  ::-webkit-scrollbar-thumb {
+    background-color: #34c9ff;
+    border: 0.3vw solid azure;
+    border-radius: 5vw;
+  }
+
+  .skills-container {
+    height: 500px;
+    width: 160px;
+    left: 35%;
+    position: relative;
+    align-items: left;
+    margin-top: -8%;
+   
+  }
+
+  .soft-skills {
+    font-size: 1.2em;
+    display: block;
+    position: sticky;
+    text-align: left;
+    position: -webkit-sticky;
+  }
+
+  .ul-skills {
+    margin-left: 15px;
+    font-size: 12px;
+    text-align: left;
+   
+    line-height: 1.7;
+  }
+
+  .education {
+    font-size: 1.2em;
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    width: 100% ;
+    background-color: azure;
+    text-align: left;
+  }
+  .education-description {
+    text-align: left;
+  }

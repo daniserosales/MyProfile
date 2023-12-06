@@ -1,14 +1,10 @@
 
-@media screen and (min-width: 900px) {/*adjust*/
+@media screen and (min-width: 1000px) {/*adjust*/
     .danise {
-        font-size: 20em;
+        font-size: 15 em;
   }
 }
-  @media screen and (max-width: 900px) {/*adjust*/
-    .danise {
-      font-size: 20vw;
-    }
-  }
+ 
   .welcome {
     font-size: 67px;
     z-index: 7000;
