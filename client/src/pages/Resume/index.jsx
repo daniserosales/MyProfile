@@ -6,7 +6,7 @@ const Resume = () => {
     return(
         <>
             <div className='resume-container'>
-                <div className='resume'>
+                <div className='resume-1'>
                
                     <div className='heading'>
                         Danise Rosales
