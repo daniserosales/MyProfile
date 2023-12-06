@@ -74,7 +74,40 @@ const Resume = () => {
                                 August 2023 - La Fosse Tech Trainee 
 
                             </p>
-                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                            <br />
+                            <div className='skills-container-2'>
+                        <span className='education'>Soft Skills </span><br />
+                        <p>
+                            <ul className='ul-skills'>
+                                <li>Decision Making</li>
+                                <li>Delegation</li>
+                                <li>Team Planning</li>
+                                <li>Problem Solving</li>
+                                <li>Effective Communicator</li>
+                                <li>Presentations</li>
+                                <li>Collaboration</li>
+                                <li>Facilitation</li>
+                            </ul>
+                        </p><br />
+                        <span className='education'>Hard Skills</span><br />
+                        <ul className='ul-skills'>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>SQL</li>
+                                <li>Database Management</li>
+                                <li>NodeExpress</li>
+                                <li>RestAPI</li>
+                                <li>Vite</li>
+                                <li>Firebase</li>
+                                <li>AWS Cloud Essentials</li>
+                                <li>Version Control</li>
+                                <li>FrontEnd</li>
+                                <li>BackEnd</li>
+                                
+                            </ul>
+                        </div>
+                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                         </div>
                         <div className='project'>
 

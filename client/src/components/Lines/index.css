@@ -145,3 +145,11 @@ width: 95%;opacity: 0;
     display: none;
   }
 }
+@media screen and (max-width: 950px) { 
+  .svg {
+   height: 100%;
+   width:100%;
+  }
+
+  
+}

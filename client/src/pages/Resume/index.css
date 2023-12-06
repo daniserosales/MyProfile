@@ -20,10 +20,11 @@
 
 .heading {
     font-size: 30px;
-    
+    text-align: center;
 }
 .connect-me {
  margin-top: 5px;
+ text-align: center;
 }
 .resume-line-container{
     width: 550px;
@@ -99,7 +100,7 @@
     display: block;
     position: sticky;
     text-align: left;
-    position: -webkit-sticky;
+    
   }
 
   .ul-skills {
@@ -123,3 +124,50 @@
   .education-description {
     text-align: left;
   }
+
+.skills-container-2 {
+  display:none;
+}
+
+  
+@media screen and (max-width: 600px) {
+  .experience-container {
+    width: 360px;
+    height: 800px;
+   
+  }
+  .skills-container {
+  display: none;
+  }
+  .skills-container-2{
+    display:block;
+    
+  }
+  .ul-skills {
+    font-size: 15px;
+  }
+  .soft-skills{
+    display: block;
+    position: sticky;
+    position: -webkit-sticky;
+    background-color: azure;
+  }
+  .resume-container {
+    width: 400px;
+    height: 900px;
+    text-align: justify;
+    text-justify: inter-word;
+    
+    
+  }
+  .exp-title-1, .exp-title-2, .exp-title-3 {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .resume-line-container{
+    width: 350px;
+    height: 1px;
+    background-color: red;
+  
+}
+}
