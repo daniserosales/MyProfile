@@ -175,7 +175,7 @@
 
 @media screen and (max-width: 420px) {
   .experience-container {
-    width: 390px;
+    width: 310px;
     height: 800px;
    
   }
@@ -196,21 +196,20 @@
     background-color: azure;
   }
   .resume-container {
-    width: 420px;
+    width: 350px;
     height: 900px;
     text-align: justify;
     text-justify: inter-word;
     margin-top: 0px;
     border-radius: 0;
-    
-    
   }
-  .exp-title-1, .exp-title-2, .exp-title-3 {
+  
+ .exp-title-1, .exp-title-2, .exp-title-3 {
     text-align: justify;
     text-justify: inter-word;
   }
   .resume-line-container{
-    width: 350px;
+    width: 290px;
     height: 1px;
     background-color: red;
   
