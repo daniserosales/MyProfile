@@ -56,7 +56,7 @@
   }
 
   .description {
-    font-size: 14px;
+    font-size: 15px;
   }
 .exp-title-1,
  .exp-title-2 , .exp-title-3{
@@ -64,7 +64,7 @@
 }
 .unordered-list{
     padding-left: 15px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* STYLING SCROLLBAR */
@@ -105,7 +105,7 @@
 
   .ul-skills {
     margin-left: 15px;
-    font-size: 12px;
+    font-size: 15px;
     text-align: left;
    
     line-height: 1.7;
