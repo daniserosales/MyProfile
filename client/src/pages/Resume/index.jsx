@@ -83,7 +83,6 @@ const Resume = () => {
                                 <li>Delegation</li>
                                 <li>Team Planning</li>
                                 <li>Problem Solving</li>
-                                <li>Effective Communicator</li>
                                 <li>Presentations</li>
                                 <li>Collaboration</li>
                                 <li>Facilitation</li>
@@ -120,7 +119,7 @@ const Resume = () => {
                                 <li>Delegation</li>
                                 <li>Team Planning</li>
                                 <li>Problem Solving</li>
-                                <li>Effective Communicator</li>
+                               
                                 <li>Presentations</li>
                                 <li>Collaboration</li>
                                 <li>Facilitation</li>

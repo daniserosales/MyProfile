@@ -9,8 +9,7 @@
 }
 
 
-.resume-icon,
-.mail-icon {
+.resume-icon{
     height: 50px;
     width: 50px;
     margin: 0 5px; /* Adjust the margin as needed */
@@ -18,6 +17,7 @@
 
 .project-icon {
    height: 50px;
+   display: none;
 }
 .project {
     text-align: center;
@@ -38,7 +38,9 @@
 .resume:hover {
     opacity: 1;
 }
-
+.mail-icon {
+    display: none;
+}
 .contact {
     border-radius: 10%;
     color: white;
