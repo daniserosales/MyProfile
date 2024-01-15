@@ -5,7 +5,8 @@
     width: 600px;
     border-radius: 2%;
     padding: 10px;
-    font-family: "Libre Baskerville", serif;
+    font-family: "Dosis", sans-serif;
+   
    
 }
 
@@ -42,7 +43,7 @@
     padding-right: 10px;
     overflow: scroll;
     background-color: inherit;
-    
+    line-height: 1.4;
   }
 
   .experience {
