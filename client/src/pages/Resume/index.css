@@ -6,6 +6,8 @@
     border-radius: 2%;
     padding: 10px;
     font-family: "Dosis", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
    
    
 }
@@ -90,9 +92,9 @@
   .skills-container {
     height: 500px;
     width: 160px;
-    left: 35%;
+    margin-left: 73%;
     position: relative;
-    align-items: left;
+    align-items: right;
     margin-top: -8%;
    
   }
@@ -106,7 +108,7 @@
   }
 
   .ul-skills {
-    margin-left: 15px;
+    margin-left: 5%;
     font-size: 13px;
     text-align: left;
    
@@ -129,6 +131,7 @@
 
 .skills-container-2 {
   display:none;
+  
 }
 
   
