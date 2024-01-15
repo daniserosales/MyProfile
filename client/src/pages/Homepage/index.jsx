@@ -6,7 +6,7 @@ const Homepage = () => {
   return (
     <>
   {/* <Navbar /> */}
-  {/* <TextMorph /> */}
+  
   <div className="area" >
               <ul className="circles">
                       <li></li>
