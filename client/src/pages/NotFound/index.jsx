@@ -9,6 +9,7 @@ function NotFound() {
         <h3>Are you lost? <br / >
         <Link to="/"> Home </Link>
         </h3>
+        <p>Test</p>
         </>
     )
 }
