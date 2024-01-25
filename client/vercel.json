@@ -1,8 +1,5 @@
 {
     "rewrites": [
-      {
-        "source": "/resume*",
-        "destination": "https://daniserosales.com/:resume*"
-      }
+        { "source": "/resume", "destination": "/resume/index.html" }
     ]
   }
