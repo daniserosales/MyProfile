@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/proxy/:resume*",
+        "destination": "https://daniserosales.com/:resume*"
+      }
+    ]
+  }
