@@ -221,5 +221,5 @@ z-index: 1;
   60% {
       -webkit-transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
       transform: translateX(calc(32px / 3.3)) rotate(calc(10deg / 3));
-  };
-};
+  }
+}
