@@ -1,0 +1,27 @@
+.spelling-proj-container {
+    color:white;
+    background-image: url("../../../../spelling-background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 1400px;
+    height:900px;
+    position: relative;
+    font-family: "Paytone One";
+    backdrop-filter: blur(0px)
+}
+.spelling-rule-container{
+  position: relative;
+display: flex;
+left: 3%;
+height: 10vh;
+width: 100%;   
+justify-content: space-around;
+
+}
+
+
+
+.spelling-word {
+    font-size: 30px;
+    font-family: "Patrick Hand";
+}
