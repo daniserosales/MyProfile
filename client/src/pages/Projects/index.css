@@ -1,6 +1,6 @@
 .spelling-proj-container {
     color:white;
-    background-image: url("../../../../client/public/spelling-background.jpg");
+    background-image: url("./spelling-background.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     max-height: 1400px;
