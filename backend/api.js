@@ -7,7 +7,7 @@ const api = express()
 const userRouter = require('./routers/userRoutes')
 const tokenRouter = require ('./routers/tokenRoutes')
 const wordRouter = require ('./routers/wordRoutes')
-const audioRouter = require ('./routers/audioRoutes')
+// const audioRouter = require ('./routers/audioRoutes')
 api.use(cors())
 api.use(express.json())
 console.log('bananaaaaa')
@@ -23,7 +23,8 @@ api.use(logger('dev'));
 api.use("/user", userRouter);
 api.use("/token", tokenRouter)
 api.use("/word", wordRouter)
-api.use("/audio", audioRouter)
+
+// api.use("/audio", audioRouter)
 
 
 module.exports = api
