@@ -1,12 +1,12 @@
 require("dotenv").config()
 const fs = require('fs');
 
-const { generateStory } = require('./openAI');
+const { generateStory } = require('./openAi');
 
-exports.generateStory = async (req, res) => {
+exports.generateStoryHandler = async (req, res) => {
     try {
       const { prompt, content } = req.body; // Extract prompt and content from the request
-     
+
       const summary = await generateStory(prompt, content);
       console.log("painting")
       res.status(200).send(summary);
