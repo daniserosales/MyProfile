@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./index.js",
-    "setup-db": "node ./database/db.js"
+    "setup-db": "node ./database/db.js",
+    "setup-mp3": "node ./database/dbmp3.js"
   },
   "author": "",
   "license": "ISC",

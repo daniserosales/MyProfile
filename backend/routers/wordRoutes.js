@@ -11,5 +11,6 @@ router.put("/:id", WordController.updateWord);
 router.get("/", WordController.getAllWords);
 router.post("/story", GPTController.generateStoryHandler)
 router.post("/audio", GPTControllerAudio)
+
 console.log('')
 module.exports = router
