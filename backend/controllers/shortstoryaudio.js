@@ -6,7 +6,8 @@ const apiKey = process.env.OPENAI_API;
 async function audioEndpoint(req,res) {
 
     try {
-        const {text}  = req.body;
+        const { text } = req.body;
+        console.log(text,'test')
         const audioUrl = await createSpeech(apiKey,text);
         console.log(audioUrl,'himiss')
         res.json({audioUrl})
