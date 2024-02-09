@@ -7,7 +7,7 @@ class MP3Controller {
             const mp3 = await MP3.getAll();
             res.status(200).json(mp3)
         } catch (error) {
-            res.status(404).json({error: "Unable to fetch users"})
+            res.status(404).json({error: "Unable to fetch mp3"})
         }
     }
 

@@ -7,6 +7,8 @@ const fullWordList = require("./words.json");
 const userRouter = require('./routers/userRoutes')
 const tokenRouter = require ('./routers/tokenRoutes')
 const wordRouter = require ('./routers/wordRoutes')
+const mp3Router = require ('./routers/mp3Routes')
+
 // const audioRouter = require ('./routers/audioRoutes')
 api.use(cors())
 api.use(express.json())
@@ -23,6 +25,7 @@ api.use(logger('dev'));
 api.use("/user", userRouter);
 api.use("/token", tokenRouter)
 api.use("/word", wordRouter)
+api.use("/mp3", mp3Router)
 
 
 api.get("/year1", (req, res) => {
