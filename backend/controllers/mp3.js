@@ -5,9 +5,14 @@ class MP3Controller {
     static async getAllMP3(req, res) {
         try {
             const mp3 = await MP3.getAll();
-            res.status(200).json(mp3)
+            if (!mp3 || mp3.length === 0) {
+                return res.status(404).json({ error: "No MP3 files found." });
+            }
+            console.log(mp3, "checking mp3");
+            res.status(200).json(mp3);
         } catch (error) {
-            res.status(404).json({error: "Unable to fetch mp3"})
+            console.error("Error while fetching MP3 files:", error);
+            res.status(500).json({ error: "Internal server error" });
         }
     }
 
