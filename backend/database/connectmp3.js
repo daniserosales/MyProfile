@@ -11,7 +11,7 @@ if (process.env.NODE_ENV == "test") {
     db = new Pool({
         connectionString: process.env.DB_MP3
     })
-    console.log(db,'dbmp3check')
+  
 }
     
 console.log('horseradish')

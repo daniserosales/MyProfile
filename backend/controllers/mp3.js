@@ -11,10 +11,18 @@ class MP3Controller {
             console.log(mp3, "checking mp3");
             res.status(200).json(mp3);
         } catch (error) {
+            // Check if the error is due to connection refusal
+            if (error.code === 'ECONNREFUSED') {
+                console.error("Error while connecting to the database:", error);
+                return res.status(500).json({ error: "Failed to connect to the database." });
+            }
+            
+            // Handle other types of errors
             console.error("Error while fetching MP3 files:", error);
             res.status(500).json({ error: "Internal server error" });
         }
     }
+    
 
     static async getByMP3Id(req, res) {
         const { id } = req.params;
