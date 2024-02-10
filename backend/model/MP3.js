@@ -1,6 +1,4 @@
 const db = require("../database/connectmp3")
-
-
 class MP3 {
 
     constructor ({audio_id,audio_name,audio_content}) {
