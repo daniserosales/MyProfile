@@ -1,10 +1,12 @@
 const db = require("../database/connectmp3")
 class MP3 {
 
-    constructor ({audio_id,audio_name,audio_content}) {
+    constructor ({audio_id,audio_name,audio_content, topic,text}) {
         this.audio_id=audio_id;
         this.audio_name=audio_name
         this.audio_content=audio_content;
+        this.topic = topic;
+        this.text = text
     }
 
     static async getAll(){
@@ -31,16 +33,17 @@ class MP3 {
 
     
     static async create(data) {
-        const { audio_name, audio_content} = data;
-        const response = await db.query('INSERT INTO audio_data(audio_data, audio_content) VALUES ($1, $2) RETURNING *;', [audio_name, audio_content ])
+       try { const { audio_name, audio_content, text, topic} = data;
+        const response = await db.query('INSERT INTO audio_data(audio_data, audio_content, topic, text) VALUES ($1, $2, $3, $4) RETURNING *;', [audio_name, audio_content, topic, text ])
         const audioId = response.rows[0].audio_id;
         const newmp3 = await MP3.getOneById(audioId)
-        return newmp3;
+        console.log(newmp3,"checking newmp3 model")
+        return newmp3;} 
+        catch (error) {
+            console.error("An error occurred while creating MP3:", error);
+            throw error;
+        }
     }
-
-    
-
-
 
 }
 

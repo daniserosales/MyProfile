@@ -2,6 +2,8 @@ const axios = require('axios');
 const fetch = require('node-fetch');
 const apiKey = process.env.OPENAI_API;
 const fs = require('fs').promises; 
+const db = require("./mp3")
+const { createMP3 } = require("./mp3create");
 
 
 async function generateStory(prompt, content) {
@@ -28,7 +30,7 @@ async function generateStory(prompt, content) {
     }
 }
 
-async function createSpeech(apiKey, text) {
+async function createSpeech(apiKey, text, word, topic) {
     try {
         const response = await fetch('https://api.openai.com/v1/audio/speech', {
             method: 'POST',
@@ -43,32 +45,52 @@ async function createSpeech(apiKey, text) {
             })
         });
 
+
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const contentType = response.headers.get('content-type');
+        console.log(contentType,"this is contentType")
         if (contentType && contentType.includes('application/json')) {
             // Response is JSON, parse it
             const responseData = await response.json();
             console.log('Response data:', responseData);
 
             const { audioUrl } = responseData;
+            console.log(audioUrl, "checking audioURL")
             // Handle audio URL...
-            return audioUrl;
+            
         } else {
             // Response is not JSON, handle it differently
             const audioBuffer = await response.arrayBuffer();
-            await fs.writeFile('./mp3/output.mp3', Buffer.from(audioBuffer));
+            const audio_name = topic ? `${word}_${topic}.mp3` : `${word}.mp3`;
 
-            console.log('Audio file saved successfully.');
-            return 'output.mp3';
+            const mp3Data = {
+                audio_name: audio_name,
+                audio_content: Buffer.from(audioBuffer),
+                text: text,
+                topic: topic,
+                word: word // Assuming audioBuffer contains the audio content
+            };
+           
+        
+            // Call the MP3 controller to create and save MP3 data
+            const mp3 = await createMP3(mp3Data);
+            
+            console.log('Audio file saved successfully:', audio_name);
+            return audio_name;
         }
+            
+            console.log('Audio file saved successfully:', audio_name);
+            return audio_name;
+        
     } catch (error) {
         console.error("An error occurred:", error);
         throw error; 
     }
 }
+
 
 async function downloadAudio(url, filename) {
     const response = await fetch(url);

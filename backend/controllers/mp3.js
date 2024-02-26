@@ -5,9 +5,6 @@ class MP3Controller {
     static async getAllMP3(req, res) {
         try {
             const mp3 = await MP3.getAll();
-            if (!mp3 || mp3.length === 0) {
-                return res.status(404).json({ error: "No MP3 files found." });
-            }
             console.log(mp3, "checking mp3");
             res.status(200).json(mp3);
         } catch (error) {
@@ -43,6 +40,22 @@ class MP3Controller {
         } catch (error) {
             console.log(error)
             res.status(404).json({ error: "User not found"})
+        }
+    }
+
+    static async create(req,res) {
+        try {
+            const {data} = req.body;
+            console.log(data, 'checking req.body')
+            if (!data || !data.audio_name || !data.audio_content || !data.text) {
+                throw new Error("Invalid data format or missing required properties.");
+            }
+            const mp3 = await MP3.create(data);
+            console.log(mp3, "checking if it created a new mp3.")
+            res.status(200).json(mp3);
+        } catch(error) {
+            res.status(400).json({"error": error.message})
+           
         }
     }
 }
