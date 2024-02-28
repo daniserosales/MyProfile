@@ -34,7 +34,8 @@ class MP3 {
     
     static async create(data) {
        try { const { audio_name, audio_content, text, topic} = data;
-        const response = await db.query('INSERT INTO audio_data(audio_data, audio_content, topic, text) VALUES ($1, $2, $3, $4) RETURNING *;', [audio_name, audio_content, topic, text ])
+        const response = await db.query('INSERT INTO audio_data(audio_name, audio_content, topic, text) VALUES ($1, $2, $3, $4) RETURNING *;', [audio_name, audio_content, topic, text ])
+        console.log(response, "response in mp3 model")
         const audioId = response.rows[0].audio_id;
         const newmp3 = await MP3.getOneById(audioId)
         console.log(newmp3,"checking newmp3 model")

@@ -9,7 +9,8 @@ if (process.env.NODE_ENV == "test") {
     })
 } else {
     db = new Pool({
-        connectionString: process.env.DB_MP3
+        connectionString: process.env.DB_MP3,
+        client_encoding: 'UTF8'
     })
   
 }

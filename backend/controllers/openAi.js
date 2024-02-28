@@ -76,9 +76,9 @@ async function createSpeech(apiKey, text, word, topic) {
            
         
             // Call the MP3 controller to create and save MP3 data
-            const mp3 = await createMP3(mp3Data);
+            await createMP3(mp3Data);
+
             
-            console.log('Audio file saved successfully:', audio_name);
             return audio_name;
         }
             
