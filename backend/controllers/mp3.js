@@ -35,11 +35,11 @@ class MP3Controller {
         const { name } = req.body;
 
         try {
-            const mp3 = await MP3.getAudioName(name);
+            const mp3 = await MP3.getBytea(name);
             res.json(mp3);
         } catch (error) {
             console.log(error)
-            res.status(404).json({ error: "User not found"})
+            res.status(404).json({ error: "MP3 name not found"})
         }
     }
 

@@ -16,6 +16,15 @@ class MP3 {
         } 
         return response.rows.map( u => new MP3(u));
     }
+
+    static async getBytea(audio_name){
+        const response = await db.query("SELECT audio_content FROM audio_data WHERE audio_name = $1", [audio_name])
+        if (response.rows.length === 0) {
+            throw new Error("MP3 not created yet.")
+        }
+        return new MP3(response.rows[0])
+    }
+
     static async getOneById(id) {
         const response = await db.query("SELECT * FROM audio_data WHERE audio_id = $1;", [id]); 
         if (response.rows.length != 1) {
