@@ -32,23 +32,20 @@ CREATE TABLE answers (
     FOREIGN KEY (room_id) REFERENCES room(room_id)
 );
 
-INSERT INTO room (user_id, room_date)
-VALUES
-(1, '10/25/23');
 
-INSERT INTO answers (answer, room_id, user_id)
-VALUES
-('shrmp', 1, 1);
+-- INSERT INTO answers (answer, room_id, user_id)
+-- VALUES
+-- ('shrmp', 1, 1);
 
-INSERT INTO words (word, user_id, token_id)
-VALUES 
-( 'shrimp', '1', '1' ),
-( 'shoes', '1', '1' ),
-( 'fish', '1', '1' ),
-( 'brush', '1', '1' ),
-( 'flash', '1', '1' ),
-( 'fresh', '1', '1' ),
-( 'ashore', '1', '1' ),
-( 'shock', '1', '1' );
+-- INSERT INTO words (word, user_id, token_id)
+-- VALUES 
+-- ( 'shrimp', '1', '1' ),
+-- ( 'shoes', '1', '1' ),
+-- ( 'fish', '1', '1' ),
+-- ( 'brush', '1', '1' ),
+-- ( 'flash', '1', '1' ),
+-- ( 'fresh', '1', '1' ),
+-- ( 'ashore', '1', '1' ),
+-- ( 'shock', '1', '1' );
 
 

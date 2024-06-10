@@ -5,7 +5,7 @@
   // const year = ['1', '2', '3','4','5','6'];
   // const term = ['Autumn', 'Summer', 'Spring', 'Random'];
 
-  function PopUpYear() {
+  function PopUpYear({onSelectYear}) {
   const [windowVisible, setWindowVisible] = useState(false);
     const [checkboxStates, setCheckboxStates] = useState({
       year1: false,
@@ -42,7 +42,7 @@
         ...prevStates,
         [year]: !prevStates[year],
       }));
-      setClicked((prevClicked) => !prevClicked);
+      onSelectYear(year);
     }
 
     return (
